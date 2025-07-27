@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  adc-app:
+    build: .
+    ports:
+      - "3000:80"
+    container_name: adc-vit-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    volumes:
+      # Optional: Mount custom nginx config
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - adc-network
+
+  # Optional: Add a reverse proxy or load balancer
+  # nginx-proxy:
+  #   image: nginx:alpine
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./proxy.conf:/etc/nginx/nginx.conf:ro
+  #   depends_on:
+  #     - adc-app
+  #   networks:
+  #     - adc-network
+
+networks:
+  adc-network:
+    driver: bridge
+
+# Optional: Add volumes for persistent data
+# volumes:
+#   adc-data:
