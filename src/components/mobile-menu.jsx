@@ -27,9 +27,9 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo and Brand */}
           <div className="flex items-center">
-            <img src="/adclogo.png" alt="ADC Logo" className="h-10 w-10 mr-2" />
+            <img src="/adclogo.png" alt="ADC Logo" className="h-14 w-14 mr-2" />
             <button onClick={() => scrollToSection('home')} className="text-2xl font-bold text-black">
-              ADC
+              ADC-VIT
             </button>
           </div>
           
@@ -51,9 +51,6 @@ export default function Header() {
           
           {/* Join Us Button and Mobile Menu */}
           <div className="flex items-center gap-4">
-            <button onClick={() => scrollToSection('contact')} className="hidden md:block bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md">
-              Join us
-            </button>
             
             {/* Mobile Menu Button */}
             <div className="md:hidden">
@@ -102,12 +99,7 @@ export default function Header() {
                     >
                       Resources
                     </button>
-                    <button 
-                      onClick={() => handleNavClick('contact')} 
-                      className="mt-4 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-md w-full"
-                    >
-                      Join us
-                    </button>
+                    
                   </nav>
                 </div>
               )}

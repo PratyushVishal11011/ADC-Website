@@ -10,7 +10,7 @@ export default function TeamPage() {
   const team1Members = [
     {
       id: 1,
-      name: 'Shravan Nair',
+      name: 'Shravan S Nair',
       role: 'Chairperson',
       image: 'src/images/current tenure/SHRAVAN copy.jpg',
       bio: 'Shravan leads the Anti Drug Club with dedication and works to organize awareness campaigns and educational initiatives across campus.',
@@ -141,201 +141,201 @@ export default function TeamPage() {
   ]
 
 const team2Members = [
-    {
-      id: 1,
-      name: 'K.Shanti Priya',
-      role: 'Chairperson',
-      image: 'src/images/previous tenure/3.jpg',
-      bio: 'Shanti Priya has been passionate about mental health awareness for over a decade and leads our organization with vision and compassion.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 2,
-      name: 'Shoumili Pathak',
-      role: 'Vice-Chairperson',
-      image: 'src/images/previous tenure/4.jpg',
-      bio: 'Shoumili brings years of experience in developing effective mental health programs and substance abuse prevention initiatives.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 3,
-      name: 'Nidhi Gupta',
-      role: 'Secretary',
-      image: 'src/images/previous tenure/5.jpg',
-      bio: 'Nidhi is dedicated to building strong connections within the community and organizing impactful outreach programs.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 4,
-      name: 'Jai Darira B',
-      role: 'Co-Secretary',
-      image: 'src/images/previous tenure/6.jpg',
-      bio: 'Jai leads our research initiatives and ensures our programs are backed by the latest scientific evidence.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 5,
-      name: 'Prabal Dubey',
-      role: 'Finance Head',
-      image: 'src/images/previous tenure/14.jpg',
-      bio: 'Prabal oversees our financial operations and ensures the sustainability of our programs.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 6,
-      name: 'Jonathan Jacob',
-      role: 'Outreach Head',
-      image: 'src/images/previous tenure/7.jpg',
-      bio: 'Jonathan organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 7,
-      name: 'Abhranil Sarkar',
-      role: 'Management Head',
-      image: 'src/images/previous tenure/9.jpg',
-      bio: 'Abhranil Sarkar manages our internal operations and ensures our team functions smoothly.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 8,
-      name: 'Anuja Sajeev',
-      role: 'Design Head',
-      image: 'src/images/previous tenure/12.jpg',
-      bio: 'Anuja organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 9,
-      name: 'Aman Chauhan',
-      role: 'Technical Head',
-      image: 'src/images/previous tenure/15.jpg',
-      bio: 'Aman organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 10,
-      name: 'Lokeswaran Kameswaran',
-      role: 'Events Head',
-      image: 'src/images/previous tenure/18.jpg',
-      bio: 'Lokeswaran organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 11,
-      name: 'Jigyasa Verma',
-      role: 'Events Head',
-      image: 'src/images/previous tenure/11.jpg',
-      bio: 'Jigyasa organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 12,
-      name: 'Vihan Shukla',
-      role: 'R&D Head',
-      image: 'src/images/previous tenure/17.jpg',
-      bio: 'Vihan organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 13,
-      name: 'Shravan Nair',
-      role: 'HR Head',
-      image: 'src/images/previous tenure/8.jpg',
-      bio: 'Shravan organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 14,
-      name: 'Kushagra Chaudhary',
-      role: 'Publicity Head',
-      image: 'src/images/previous tenure/13.jpg',
-      bio: 'Kushagra organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      id: 15,
-      name: '<name>',
-      role: 'Editorial Head',
-      image: 'src/images/previous tenure/13.jpg',
-      bio: '<name> organizes our workshops, seminars, and awareness events to engage the campus community.',
-      social: {
-        facebook: '#',
-        twitter: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
+  {
+    id: 1,
+    name: 'K.Shanti Priya',
+    role: 'Chairperson',
+    image: 'src/images/previous tenure/3.jpg',
+    bio: 'Shanti Priya is a dedicated student leader who spearheaded multiple anti-drug awareness campaigns during her tenure, inspiring fellow students to make healthy life choices.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
     }
+  },
+  {
+    id: 2,
+    name: 'Shoumili Pathak',
+    role: 'Vice-Chairperson',
+    image: 'src/images/previous tenure/4.jpg',
+    bio: 'Shoumili is a passionate student advocate who coordinated with faculty and administration to implement effective substance abuse prevention programs across campus.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 3,
+    name: 'Nidhi Gupta',
+    role: 'Secretary',
+    image: 'src/images/previous tenure/5.jpg',
+    bio: 'Nidhi managed club documentation and communication as a student leader, ensuring smooth coordination between team members and successful event planning.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 4,
+    name: 'Jai Darira B',
+    role: 'Co-Secretary',
+    image: 'src/images/previous tenure/6.jpg',
+    bio: 'Jai supported administrative activities and helped bridge communication between the club and other student organizations during his academic years.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 5,
+    name: 'Prabal Dubey',
+    role: 'Finance Head',
+    image: 'src/images/previous tenure/14.jpg',
+    bio: 'Prabal efficiently managed the club budget and funding for events while balancing his academic responsibilities as a dedicated student member.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 6,
+    name: 'Jonathan Jacob',
+    role: 'Outreach Head',
+    image: 'src/images/previous tenure/7.jpg',
+    bio: 'Jonathan connected with peer student groups and community organizations to expand awareness programs and build meaningful collaborations.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 7,
+    name: 'Abhranil Sarkar',
+    role: 'Management Head',
+    image: 'src/images/previous tenure/9.jpg',
+    bio: 'Abhranil coordinated team activities and managed internal operations while maintaining his academic excellence as a committed student leader.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 8,
+    name: 'Anuja Sajeev',
+    role: 'Design Head',
+    image: 'src/images/previous tenure/12.jpg',
+    bio: 'Anuja created compelling visual content and promotional materials for awareness campaigns, combining her creative skills with her academic pursuits.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 9,
+    name: 'Aman Chauhan',
+    role: 'Technical Head',
+    image: 'src/images/previous tenure/15.jpg',
+    bio: 'Aman managed the club\'s digital presence and technical infrastructure, utilizing his programming skills to support awareness initiatives.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 10,
+    name: 'Lokeswaran Kameswaran',
+    role: 'Events Head',
+    image: 'src/images/previous tenure/18.jpg',
+    bio: 'Lokeswaran organized engaging workshops and awareness events for students, successfully balancing event planning with his academic commitments.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 11,
+    name: 'Jigyasa Verma',
+    role: 'Events Head',
+    image: 'src/images/previous tenure/11.jpg',
+    bio: 'Jigyasa planned and executed impactful campus events and seminars, bringing together students for meaningful discussions on health and wellness.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 12,
+    name: 'Vihan Shukla',
+    role: 'R&D Head',
+    image: 'src/images/previous tenure/17.jpg',
+    bio: 'Vihan researched effective prevention strategies and developed innovative approaches to student engagement while pursuing his academic goals.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 13,
+    name: 'Shravan S Nair',
+    role: 'HR Head',
+    image: 'src/images/previous tenure/8.jpg',
+    bio: 'Shravan managed team recruitment and member development, fostering a supportive environment for student volunteers and club participants.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 14,
+    name: 'Kushagra Chaudhary',
+    role: 'Publicity Head',
+    image: 'src/images/previous tenure/13.jpg',
+    bio: 'Kushagra promoted club activities across campus through social media and student networks, effectively reaching diverse student communities.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  },
+  {
+    id: 15,
+    name: 'Juliette Lucy George',
+    role: 'Editorial Head',
+    image: 'src/images/previous tenure/20.jpg',
+    bio: 'Juliette created educational content and managed publications, using her writing skills to spread awareness among the student community.',
+    social: {
+    facebook: '#',
+    twitter: '#',
+    instagram: '#',
+    linkedin: '#'
+    }
+  }
   ]
 
   const currentTeam = activeTeam === 'team1' ? team1Members : team2Members

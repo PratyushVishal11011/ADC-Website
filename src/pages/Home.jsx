@@ -593,73 +593,44 @@ export default function ADCWebsite() {
 
   return (
     <div className="min-h-screen bg-[#f5f5dc]">
-      {/* Header */}
-      <header className="bg-[#f5f5dc] shadow-sm fixed top-0 left-0 right-0 z-50">
-        <nav className="container mx-auto px-6 py-3">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center">
-              <img src="/adclogo.png" alt="ADC Logo" className="h-10 w-10 mr-2" />
-              <button onClick={() => scrollToSection('home')} className="text-2xl font-bold text-black">
-                ADC
-              </button>
-            </div>
-            <div className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('home')} className="text-gray-800 hover:text-gray-600">
-                Home
-              </button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-800 hover:text-gray-600">
-                About Us
-              </button>
-              <button onClick={() => scrollToSection('events')} className="text-gray-800 hover:text-gray-600">
-                Events
-              </button>
-              <button onClick={() => scrollToSection('resources')} className="text-gray-800 hover:text-gray-600">
-                Resources
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
+      {/* Header - Using MobileMenu component for better mobile experience */}
+      <MobileMenu />
 
       {/* Home Section */}
       <section id="home" className="min-h-screen bg-[#f5f5dc] pt-16">
         {/* Hero Section */}
-        <section className="container mx-auto px-4 pt-32 pb-20 text-center">
-        <h2 className="text-green-600 mb-6 text-5xl">Welcome to ADC</h2>
-        <h1 className="text-black mb-6 leading-tight flex flex-col items-center">
-          <h1 className="text-black mb-6 leading-tight flex flex-col items-center">
-          <span className="text-9xl">CHOOSE</span>
-          <span className="text-9xl">LIFE</span>
-          <span className="text-9xl">OVER</span>
-          <span className="text-9xl">HIGHS</span>
-        </h1>
-        </h1>
+        <div className="container mx-auto px-4 sm:px-6 pt-20 sm:pt-32 pb-12 sm:pb-20 text-center">
+          <h2 className="text-green-600 mb-4 sm:mb-6 text-2xl sm:text-3xl md:text-5xl">Welcome to ADC-VIT</h2>
+          <h1 className="text-black mb-4 sm:mb-6 leading-tight flex flex-col items-center">
+            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">CHOOSE</span>
+            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">LIFE</span>
+            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">OVER</span>
+            <span className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold">HIGHS</span>
+          </h1>
 
-
-        <p className="max-w-2xl mx-auto text-gray-700 mb-8">
-          Welcome to our Anti-Drug Club, where we are committed to creating a safe and drug-free environment for our
-          community. Our mission is to educate, support, and empower individuals to make informed choices and lead
-          healthy, fulfilling lives
-        </p>
-      </section>
-        <div className="container mx-auto px-4 pt-32 pb-20">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="md:w-1/2">
-              <p className="text-gray-600 mb-2">Understanding Substance Abuse</p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+          <p className="max-w-2xl mx-auto text-gray-700 mb-6 sm:mb-8 text-sm sm:text-base px-4">
+            Welcome to our Anti-Drug Club VIT, where we are committed to creating a safe and drug-free environment for our
+            community. Our mission is to educate, support, and empower individuals to make informed choices and lead
+            healthy, fulfilling lives
+          </p>
+        </div>
+        <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
+              <p className="text-gray-600 mb-2 text-sm sm:text-base">Understanding Substance Abuse</p>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 mb-4 sm:mb-6">
                 Empowering Students to Make Healthy Choices
               </h1>
-              <p className="text-gray-600 mb-8 max-w-lg">
+              <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-lg mx-auto lg:mx-0">
                 Our comprehensive educational resources, personal stories, and confidential support services aim to help
                 college students navigate substance abuse prevention and recovery.
               </p>
-              
             </div>
-            <div className="md:w-1/2 flex justify-center">
+            <div className="w-full lg:w-1/2 flex justify-center">
               <img 
                 src="./landing.png" 
                 alt="Student making healthy choices" 
-                className="max-w-full h-auto rounded-lg"
+                className="max-w-full h-auto rounded-lg w-full max-w-md lg:max-w-none"
               />
             </div>
           </div>
@@ -673,92 +644,91 @@ export default function ADCWebsite() {
         </div> */}
 
         {/* Stats Section */}
-        <div ref={sectionRef} className="bg-gray-800 text-white py-12 mt-20">
-      <div className="container mx-auto px-4">
-        <p className="text-center mb-12 text-lg">
-          "Every year, over 500,000 lives are lost due to drug abuse. Be the change."
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center flex flex-col items-center">
-              <div className="bg-green-600 rounded-full p-4 mb-4 w-16 h-16 flex items-center justify-center text-2xl">
-                {stat.icon}
-              </div>
-              <h3 className="text-3xl font-bold mb-2">
-                {stat.prefix}
-                {startCounters ? (
-                  <CountUp
-                    start={0}
-                    end={stat.number}
-                    duration={4.5}
-                    separator=","
-                    useEasing={true}
-                  />
-                ) : (
-                  0
-                )}
-                {stat.suffix}
-              </h3>
-              <p className="text-gray-400">{stat.description}</p>
+        <div ref={sectionRef} className="bg-gray-800 text-white py-8 sm:py-12 mt-12 sm:mt-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <p className="text-center mb-8 sm:mb-12 text-base sm:text-lg">
+              "Every year, over 500,000 lives are lost due to drug abuse. Be the change."
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center flex flex-col items-center">
+                  <div className="bg-green-600 rounded-full p-3 sm:p-4 mb-3 sm:mb-4 w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center text-xl sm:text-2xl">
+                    {stat.icon}
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+                    {stat.prefix}
+                    {startCounters ? (
+                      <CountUp
+                        start={0}
+                        end={stat.number}
+                        duration={4.5}
+                        separator=","
+                        useEasing={true}
+                      />
+                    ) : (
+                      0
+                    )}
+                    {stat.suffix}
+                  </h3>
+                  <p className="text-gray-400 text-sm sm:text-base">{stat.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
       </section>
 
       <section id="about" className="min-h-screen pt-20 bg-[#f5f5dc]">
-        <h1 className="text-6xl text-black font-bold text-center mb-2">About Us</h1>
-        <div className="container mx-auto px-6 py-12">
-          
+        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black font-bold text-center mb-8 sm:mb-12 px-4">About Us</h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white p-8 rounded-lg shadow-md">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
                 <div className="bg-orange-100 rounded-full p-2 mr-3">
                   <img src="/1.png" alt="Icon" className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl text-black font-semibold">Our Mission</h3>
+                <h3 className="text-lg sm:text-xl text-black font-semibold">Our Mission</h3>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 At our organization, we are dedicated to creating a compassionate and informative environment that
                 empowers college students to make healthy choices and seek the support they need.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
                 <div className="bg-orange-100 rounded-full p-2 mr-3">
                   <img src="/2.png" alt="Icon" className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl text-black font-semibold">Our Values</h3>
+                <h3 className="text-lg sm:text-xl text-black font-semibold">Our Values</h3>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 We believe in fostering a community of compassion, where students feel empowered to take control of their
                 health and seek help without stigma or judgment.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
                 <div className="bg-orange-100 rounded-full p-2 mr-3">
                   <img src="/3.png" alt="Icon" className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl text-black font-semibold">Our Impact</h3>
+                <h3 className="text-lg sm:text-xl text-black font-semibold">Our Impact</h3>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 Through our comprehensive approach, we have supported countless students in navigating the challenges of substance abuse and mental health issues.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
                 <div className="bg-orange-100 rounded-full p-2 mr-3">
                   <img src="/4.png" alt="Icon" className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl text-black font-semibold">Our Approach</h3>
+                <h3 className="text-lg sm:text-xl text-black font-semibold">Our Approach</h3>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 Through interactive tools and resources, we guide students in understanding the risks of substance abuse
                 and connect them with confidential support services to promote their overall well-being.
               </p>
@@ -768,19 +738,19 @@ export default function ADCWebsite() {
           </div>
 
           {/* Team Section Preview */}
-          <div className="mt-12">
-            <h1 className="text-6xl text-black font-bold text-center mb-8">Our Team</h1>
-            <p className="text-center text-gray-600 mb-8">
+          <div className="mt-8 sm:mt-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black font-bold text-center mb-6 sm:mb-8 px-4">Our Team</h2>
+            <p className="text-center text-gray-600 mb-6 sm:mb-8 px-4 text-sm sm:text-base">
               Meet the dedicated individuals who make our mission possible.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
               {teamMembers.slice(0, 4).map((member, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105">
-                  <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-48 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl text-black font-semibold mb-1">{member.name}</h3>
-                    <p className="text-green-600 mb-4 font-medium">{member.role}</p>
-                    <p className="text-gray-700">{member.bio}</p>
+                  <img src={member.image || "/placeholder.svg"} alt={member.name} className="w-full h-36 sm:h-48 object-cover" />
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl text-black font-semibold mb-1">{member.name}</h3>
+                    <p className="text-green-600 mb-3 sm:mb-4 font-medium text-sm sm:text-base">{member.role}</p>
+                    <p className="text-gray-700 text-xs sm:text-sm lg:text-base">{member.bio}</p>
                   </div>
                 </div>
               ))}
@@ -788,7 +758,7 @@ export default function ADCWebsite() {
             <div className="text-center">
               <Link 
                 to="/team"
-                className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-md transition-colors duration-300 inline-block"
+                className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 sm:py-3 px-6 sm:px-8 rounded-md transition-colors duration-300 inline-block text-sm sm:text-base"
               >
                 Meet Our Full Team
               </Link>
@@ -799,33 +769,20 @@ export default function ADCWebsite() {
 
       {/* Events Section */}
       <section id="events" className="min-h-screen pt-20 bg-[#f5f5dc]">
-        <div className="container mx-auto px-6 py-12">
-          <h1 className="text-6xl text-black font-bold text-center mb-2">Events</h1>
-          <div className="mb-8 flex flex-wrap gap-4">
-            <input
-              type="text"
-              placeholder="Search events..."
-              className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <select
-              className="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
-              onChange={(e) => setFilter(e.target.value)}
-            >
-              <option value="all">All Events</option>
-              <option value="upcoming">Upcoming Events</option>
-              <option value="past">Past Events</option>
-            </select>
+        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black font-bold text-center mb-8 sm:mb-12 px-4">Events</h1>
+          <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+            
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filteredEvents.map((event, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
-                <img src={event.image || "/placeholder.svg"} alt={event.title} className="w-full h-56 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-2xl font-semibold mb-2 text-gray-800">{event.title}</h3>
-                  <p className="text-blue-600 mb-4 font-medium">{event.date}</p>
-                  <p className="text-gray-600">{event.description}</p>
-                  <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300">
+                <img src={event.image || "/placeholder.svg"} alt={event.title} className="w-full h-40 sm:h-56 object-cover" />
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 text-gray-800">{event.title}</h3>
+                  <p className="text-blue-600 mb-3 sm:mb-4 font-medium text-sm sm:text-base">{event.date}</p>
+                  <p className="text-gray-600 text-sm sm:text-base mb-4">{event.description}</p>
+                  <button className="w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition duration-300">
                     Learn More
                   </button>
                 </div>
@@ -837,39 +794,40 @@ export default function ADCWebsite() {
 
       {/* Resources Section*/}
       <section id="resources" className="min-h-screen pt-20 bg-[#f5f5dc]">
-        <div className="container mx-auto px-6 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-start gap-6">
-            <div className="md:w-1/2 pl-6">
-              <h1 className="text-5xl font-bold text-gray-800 mb-6">Our Resources</h1>
-              <p className="text-gray-700 text-lg max-w-lg">
+        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-8 sm:mb-16">
+            <div className="w-full lg:w-1/2 text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Our Resources</h1>
+              <p className="text-gray-700 text-sm sm:text-base lg:text-lg max-w-lg mx-auto lg:mx-0">
                 Explore our extensive collection of educational materials, personal stories, and interactive tools 
                 designed to help college students understand the impact of substance abuse, access support services, 
                 and make informed choices for their well-being.
               </p>
             </div>
-            <div className="md:w-1/2 pr-6 flex justify-center">
+            <div className="w-full lg:w-1/2 flex justify-center">
               <img 
                 src="/image.png" 
                 alt="Person with resources" 
-                className="max-w-full h-auto"
+                className="max-w-full h-auto w-full max-w-md lg:max-w-none"
               />
             </div>
           </div>
 
           {/* Personalized Support Section */}
-          <div className="mb-16">
-            <h2 className="text-center text-gray-700 text-xl mb-4">Personalized Support</h2>
+          <div className="mb-12 sm:mb-16">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-gray-700 text-lg sm:text-xl mb-4">Personalized Support</h2>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">Navigating Substance Abuse Challenges</h3>
+            </div>
             
-            <h2 className="text-center text-3xl font-bold text-gray-800 mb-12">Navigating Substance Abuse Challenges</h2>
-            
-            <div className="flex flex-col md:flex-row justify-center gap-16 mb-16">
+            <div className="flex flex-col lg:flex-row justify-center gap-8 sm:gap-12 lg:gap-16 mb-12 sm:mb-16">
               {/* Coping Strategies Card */}
-              <div className="flex flex-col items-center max-w-sm">
-                <div className="bg-[#f8d7c4] p-4 rounded-full mb-4">
-                  <img src="/coping.png" alt="Coping Strategies Icon" className="h-16 w-16" />
+              <div className="flex flex-col items-center max-w-sm mx-auto lg:mx-0">
+                <div className="bg-[#f8d7c4] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+                  <img src="/coping.png" alt="Coping Strategies Icon" className="h-12 w-12 sm:h-16 sm:w-16" />
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Coping Strategies</h3>
-                <p className="text-gray-700 text-center">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 text-center">Coping Strategies</h3>
+                <p className="text-gray-700 text-center text-sm sm:text-base">
                   Discover practical coping mechanisms and evidence-based approaches to address 
                   substance abuse and promote overall wellbeing
                 </p>
@@ -877,12 +835,12 @@ export default function ADCWebsite() {
               </div>
 
               {/* Wellness Resources Card */}
-              <div className="flex flex-col items-center max-w-sm">
-                <div className="bg-[#b8d8d8] p-4 rounded-full mb-4">
-                  <img src="/wellness.png" alt="Wellness Resources Icon" className="h-16 w-16" />
+              <div className="flex flex-col items-center max-w-sm mx-auto lg:mx-0">
+                <div className="bg-[#b8d8d8] p-3 sm:p-4 rounded-full mb-3 sm:mb-4">
+                  <img src="/wellness.png" alt="Wellness Resources Icon" className="h-12 w-12 sm:h-16 sm:w-16" />
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Wellness Resources</h3>
-                <p className="text-gray-700 text-center">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 text-center">Wellness Resources</h3>
+                <p className="text-gray-700 text-center text-sm sm:text-base">
                   Access a curated collection of educational materials, personal stories, and wellness 
                   resources to support your journey
                 </p>
@@ -892,19 +850,19 @@ export default function ADCWebsite() {
           </div>
 
           {/* FAQ Section - Based on second image */}
-          <div className="mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">Frequently Asked Questions</h2>
+          <div className="mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 sm:mb-12 text-center">Frequently Asked Questions</h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
               <div className="bg-[#f8e3d4] rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-green-100 rounded-full p-3">
-                      <img src="/1st.png" alt="Leaf Icon" className="h-10 w-10" />
+                <div className="p-4 sm:p-6">
+                  <div className="flex justify-center mb-3 sm:mb-4">
+                    <div className="bg-green-100 rounded-full p-2 sm:p-3">
+                      <img src="/1st.png" alt="Leaf Icon" className="h-8 w-8 sm:h-10 sm:w-10" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">What is Substance Abuse?</h3>
-                  <p className="text-gray-600 text-sm mb-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-center">What is Substance Abuse?</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6">
                     Substance abuse refers to the harmful or excessive use of drugs, alcohol, or other substances, often 
                     leading to physical, mental, and social consequences. It's a complex issue that can impact college students...
                   </p>
@@ -913,14 +871,14 @@ export default function ADCWebsite() {
               </div>
 
               <div className="bg-green-600 rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-white rounded-full p-3">
-                      <img src="/2nd.png" alt="Leaf Icon" className="h-10 w-10" />
+                <div className="p-4 sm:p-6">
+                  <div className="flex justify-center mb-3 sm:mb-4">
+                    <div className="bg-white rounded-full p-2 sm:p-3">
+                      <img src="/2nd.png" alt="Leaf Icon" className="h-8 w-8 sm:h-10 sm:w-10" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4 text-center">Understanding the Risks</h3>
-                  <p className="text-white text-sm mb-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 text-center">Understanding the Risks</h3>
+                  <p className="text-white text-xs sm:text-sm mb-4 sm:mb-6">
                     Substance abuse can have far-reaching effects on a student's academic performance, physical and mental 
                     health, and overall well-being. It's crucial to be aware of the potential risks...
                   </p>
@@ -929,14 +887,14 @@ export default function ADCWebsite() {
               </div>
 
               <div className="bg-[#f8e3d4] rounded-lg shadow-md overflow-hidden">
-                <div className="p-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-green-100 rounded-full p-3">
-                      <img src="/3rd.png" alt="Leaf Icon" className="h-10 w-10" />
+                <div className="p-4 sm:p-6">
+                  <div className="flex justify-center mb-3 sm:mb-4">
+                    <div className="bg-green-100 rounded-full p-2 sm:p-3">
+                      <img src="/3rd.png" alt="Leaf Icon" className="h-8 w-8 sm:h-10 sm:w-10" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4 text-center">Accessing Support</h3>
-                  <p className="text-gray-600 text-sm mb-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-center">Accessing Support</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm mb-4 sm:mb-6">
                     Our organization offers a range of confidential support services, including counseling, support 
                     groups, and referrals to specialized treatment providers...
                   </p>
@@ -946,45 +904,45 @@ export default function ADCWebsite() {
           </div>
 
           {/* API Integration Section */}
-          <div className="container mx-auto px-6 py-8 bg-gradient-to-r from-[#f5f5dc] to-[#b8d8d8] rounded-lg shadow-md mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Healthcare Resources</h2>
+          <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 bg-gradient-to-r from-[#f5f5dc] to-[#b8d8d8] rounded-lg shadow-md mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center">Healthcare Resources</h2>
             
-            {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+            {error && <p className="text-red-500 text-center mb-4 text-sm sm:text-base">{error}</p>}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
               <div>
-                <label className="block text-gray-700 mb-2">Search for Drug Information</label>
-                <div className="flex">
+                <label className="block text-gray-700 mb-2 text-sm sm:text-base font-medium">Search for Drug Information</label>
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="text"
                     placeholder="Enter drug name..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="p-2 border rounded w-full"
+                    className="p-2 border rounded w-full text-sm sm:text-base"
                   />
                   <button 
                     onClick={fetchDrugTrends} 
                     disabled={loading} 
-                    className="ml-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md"
+                    className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md text-sm sm:text-base min-w-20 sm:min-w-24 flex items-center justify-center"
                   >
                     {loading ? <Loader className="animate-spin" size={16} /> : "Search"}
                   </button>
                 </div>
               </div>
               <div>
-                <label className="block text-gray-700 mb-2">Find Nearby Healthcare Facilities</label>
-                <div className="flex">
+                <label className="block text-gray-700 mb-2 text-sm sm:text-base font-medium">Find Nearby Healthcare Facilities</label>
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input
                     type="text"
                     placeholder="Enter location (e.g., city, state)..."
                     value={locationSearch}
                     onChange={(e) => setLocationSearch(e.target.value)}
-                    className="p-2 border rounded w-full"
+                    className="p-2 border rounded w-full text-sm sm:text-base"
                   />
                   <button 
                     onClick={fetchTreatmentCenters} 
                     disabled={loading} 
-                    className="ml-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md"
+                    className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md text-sm sm:text-base min-w-16 sm:min-w-20 flex items-center justify-center"
                   >
                     {loading ? <Loader className="animate-spin" size={16} /> : "Find"}
                   </button>
@@ -993,9 +951,9 @@ export default function ADCWebsite() {
             </div>
 
             {/* Statistics Visualization */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Drug Overdose Deaths in the US</h3>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Drug Overdose Deaths in the US</h3>
                 {overdoseStats.length > 0 ? (
                   <ChartComponent 
                     data={overdoseStats} 
@@ -1005,14 +963,14 @@ export default function ADCWebsite() {
                     color="#e11d48"
                   />
                 ) : (
-                  <div className="h-64 flex items-center justify-center">
-                    <Loader className="animate-spin mr-2" /> Loading data...
+                  <div className="h-48 sm:h-64 flex items-center justify-center">
+                    <Loader className="animate-spin mr-2" /> <span className="text-sm sm:text-base">Loading data...</span>
                   </div>
                 )}
               </div>
               
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Mental Health Conditions Prevalence (%)</h3>
+              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Mental Health Conditions Prevalence (%)</h3>
                 {mentalHealthStats.length > 0 ? (
                   <ChartComponent 
                     data={mentalHealthStats} 
@@ -1022,8 +980,8 @@ export default function ADCWebsite() {
                     color="#4f46e5"
                   />
                 ) : (
-                  <div className="h-64 flex items-center justify-center">
-                    <Loader className="animate-spin mr-2" /> Loading data...
+                  <div className="h-48 sm:h-64 flex items-center justify-center">
+                    <Loader className="animate-spin mr-2" /> <span className="text-sm sm:text-base">Loading data...</span>
                   </div>
                 )}
               </div>
@@ -1031,8 +989,8 @@ export default function ADCWebsite() {
 
             {/* Drug Statistics */}
             {drugStats.length > 0 && (
-              <div className="bg-white p-4 rounded-lg shadow-md mb-8">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Common Drug Reactions</h3>
+              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Common Drug Reactions</h3>
                 <ChartComponent 
                   data={drugStats} 
                   type="bar" 
@@ -1045,8 +1003,8 @@ export default function ADCWebsite() {
 
             {/* Drug Trends */}
             {drugTrends.length > 0 && (
-              <div className="bg-white p-4 rounded-lg shadow-md mb-8">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Drug Trend Over Time: {search}</h3>
+              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md mb-6 sm:mb-8">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Drug Trend Over Time: {search}</h3>
                 <ChartComponent 
                   data={drugTrends} 
                   type="line" 
@@ -1059,32 +1017,32 @@ export default function ADCWebsite() {
 
             {/* Map and Treatment Centers */}
             {mapVisible && (
-              <div className="bg-white p-4 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Healthcare Facilities Near {locationSearch}</h3>
-                <div className="flex flex-col md:flex-row gap-4">
-                  <div ref={mapContainerRef} className="w-full md:w-1/2 h-96 border rounded"></div>
+              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Healthcare Facilities Near {locationSearch}</h3>
+                <div className="flex flex-col lg:flex-row gap-4">
+                  <div ref={mapContainerRef} className="w-full lg:w-1/2 h-64 sm:h-80 lg:h-96 border rounded"></div>
                   
-                  <div className="w-full md:w-1/2">
+                  <div className="w-full lg:w-1/2">
                     {treatmentCenters.length > 0 ? (
-                      <div className="h-96 overflow-y-auto pr-2">
-                        <h4 className="text-lg font-semibold mb-2">Found {treatmentCenters.length} nearby facilities:</h4>
-                        <ul className="space-y-3">
+                      <div className="h-64 sm:h-80 lg:h-96 overflow-y-auto pr-2">
+                        <h4 className="text-base sm:text-lg font-semibold mb-2">Found {treatmentCenters.length} nearby facilities:</h4>
+                        <ul className="space-y-2 sm:space-y-3">
                           {treatmentCenters.map((center) => (
-                            <li key={center.id} className="p-3 bg-gray-50 rounded shadow-sm hover:shadow transition border-l-4 border-green-500">
-                              <p className="font-medium text-green-600">
+                            <li key={center.id} className="p-2 sm:p-3 bg-gray-50 rounded shadow-sm hover:shadow transition border-l-4 border-green-500">
+                              <p className="font-medium text-green-600 text-sm sm:text-base">
                                 {center.name}
                                 {center.important && <span className="ml-2 text-xs bg-red-500 text-white px-2 py-0.5 rounded-full">Major</span>}
                               </p>
-                              <p className="text-sm font-medium text-gray-700">{center.category}</p>
-                              <p className="text-sm text-gray-600">{center.address}</p>
-                              <p className="text-sm text-gray-600">
+                              <p className="text-xs sm:text-sm font-medium text-gray-700">{center.category}</p>
+                              <p className="text-xs sm:text-sm text-gray-600">{center.address}</p>
+                              <p className="text-xs sm:text-sm text-gray-600">
                                 <strong>Distance:</strong> {center.distance ? center.distance.toFixed(1) + ' km' : 'N/A'}
                               </p>
                               <a 
                                 href={`https://www.openstreetmap.org/directions?from=${DEFAULT_COORDS.lat},${DEFAULT_COORDS.lon}&to=${center.lat},${center.lon}`} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="mt-2 inline-block text-sm text-green-500 hover:text-green-700"
+                                className="mt-1 sm:mt-2 inline-block text-xs sm:text-sm text-green-500 hover:text-green-700"
                               >
                                 Get Directions
                               </a>
@@ -1093,7 +1051,7 @@ export default function ADCWebsite() {
                         </ul>
                       </div>
                     ) : (
-                      <p className="text-center py-10">No healthcare facilities found in this location. Try a different search term or location.</p>
+                      <p className="text-center py-8 sm:py-10 text-sm sm:text-base">No healthcare facilities found in this location. Try a different search term or location.</p>
                     )}
                   </div>
                 </div>
@@ -1104,69 +1062,77 @@ export default function ADCWebsite() {
       </section>
 
       {/* Contact/Footer Section */}
-      <section id="contact" className="bg-gray-800 text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="mb-8 md:mb-0">
-              <img src="/adc.png" alt="ADC Logo" className="h-16 w-16 mb-4" />
-              <h3 className="text-xl font-bold mb-4">Anti Drug Club</h3>
-              <p className="text-sm text-gray-300 mb-4">
+      <section id="contact" className="bg-gray-800 text-white py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+            {/* Company Info */}
+            <div className="text-center sm:text-left">
+              <img src="/adc.png" alt="ADC Logo" className="h-12 w-12 sm:h-16 sm:w-16 mb-3 sm:mb-4 mx-auto sm:mx-0" />
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Anti Drug Club</h3>
+              <p className="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">
                 Empowering students to make healthy choices and lead fulfilling lives free from substance abuse.
               </p>
-              <p className="text-sm">
+              <p className="text-xs sm:text-sm text-gray-400">
                 ALL RIGHTS RESERVED
                 <br />
                 ADC 2025
               </p>
             </div>
 
-            <div className="flex flex-col mb-8 md:mb-0">
-              <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
-              <button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-white mb-2 text-left">
-                Home
-              </button>
-              <button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white mb-2 text-left">
-                About Us
-              </button>
-              <button onClick={() => scrollToSection('events')} className="text-gray-400 hover:text-white mb-2 text-left">
-                Events
-              </button>
-              <button onClick={() => scrollToSection('resources')} className="text-gray-400 hover:text-white mb-2 text-left">
-                Resources
-              </button>
-            </div>
-
-            <div className="flex flex-col mb-8 md:mb-0">
-              <h4 className="font-semibold text-lg mb-4">Contact Us</h4>
-              <div className="flex items-center mb-3">
-                <MapPin className="h-5 w-5 mr-2 text-green-400" />
-                <p className="text-gray-300">VIT VELLORE</p>
-              </div>
-              <div className="flex items-center mb-3">
-                <Phone className="h-5 w-5 mr-2 text-green-400" />
-                <p className="text-gray-300">(555) 123-4567</p>
-              </div>
-              <div className="flex items-center mb-3">
-                <Mail className="h-5 w-5 mr-2 text-green-400" />
-                <p className="text-gray-300">contact@adclub.org</p>
+            {/* Quick Links */}
+            <div className="text-center sm:text-left">
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Quick Links</h4>
+              <div className="flex flex-col space-y-2">
+                <button onClick={() => scrollToSection('home')} className="text-gray-400 hover:text-white text-sm sm:text-base transition-colors duration-200 text-center sm:text-left">
+                  Home
+                </button>
+                <button onClick={() => scrollToSection('about')} className="text-gray-400 hover:text-white text-sm sm:text-base transition-colors duration-200 text-center sm:text-left">
+                  About Us
+                </button>
+                <button onClick={() => scrollToSection('events')} className="text-gray-400 hover:text-white text-sm sm:text-base transition-colors duration-200 text-center sm:text-left">
+                  Events
+                </button>
+                <button onClick={() => scrollToSection('resources')} className="text-gray-400 hover:text-white text-sm sm:text-base transition-colors duration-200 text-center sm:text-left">
+                  Resources
+                </button>
               </div>
             </div>
 
-            <div>
-              <h4 className="font-semibold text-lg mb-4">Connect with Us</h4>
-              <div className="flex space-x-4 mb-6">
-                <a href="#" className="text-gray-400 hover:text-white bg-gray-700 p-2 rounded-full">
-                  <Youtube className="h-5 w-5" />
+            {/* Contact Info */}
+            <div className="text-center sm:text-left">
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Contact Us</h4>
+              <div className="space-y-2 sm:space-y-3">
+                <div className="flex items-center justify-center sm:justify-start">
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-green-400 flex-shrink-0" />
+                  <p className="text-gray-300 text-sm sm:text-base">VIT VELLORE</p>
+                </div>
+                <div className="flex items-center justify-center sm:justify-start">
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-green-400 flex-shrink-0" />
+                  <p className="text-gray-300 text-sm sm:text-base">(555) 123-4567</p>
+                </div>
+                <div className="flex items-center justify-center sm:justify-start">
+                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-green-400 flex-shrink-0" />
+                  <p className="text-gray-300 text-sm sm:text-base">contact@adclub.org</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media */}
+            <div className="text-center sm:text-left">
+              <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4">Connect with Us</h4>
+              <div className="flex space-x-3 sm:space-x-4 justify-center sm:justify-start">
+                <a href="#" className="text-gray-400 hover:text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-full transition-colors duration-200">
+                  <Youtube className="h-4 w-4 sm:h-5 sm:w-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white bg-gray-700 p-2 rounded-full">
-                  <Instagram className="h-5 w-5" />
+                <a href="#" className="text-gray-400 hover:text-white bg-gray-700 hover:bg-gray-600 p-2 rounded-full transition-colors duration-200">
+                  <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
                 </a>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-            <p className="text-sm text-gray-400">
+          <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
+            <p className="text-xs sm:text-sm text-gray-400">
               &copy; {new Date().getFullYear()} Anti Drug Club. All rights reserved. | 
               <a href="#" className="text-gray-400 hover:text-white ml-2">Privacy Policy</a> | 
               <a href="#" className="text-gray-400 hover:text-white ml-2">Terms of Service</a>
