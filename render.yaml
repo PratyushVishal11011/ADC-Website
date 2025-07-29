@@ -1,0 +1,35 @@
+# Render Deployment Configuration
+services:
+  # Web Service Configuration
+  - type: web
+    name: adc-vit-app
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    region: oregon # Choose: oregon, frankfurt, singapore
+    plan: free # free, starter, standard, pro
+    # Custom domain (optional)
+    # customDomains:
+    #   - name: adc-vit.yourdomain.com
+    buildCommand: ""
+    startCommand: ""
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 80
+    # Auto-deploy from GitHub
+    autoDeploy: true
+    branch: main
+    # Build settings
+    buildFilter:
+      paths:
+      - src/**
+      - public/**
+      - package.json
+      - Dockerfile
+      - nginx.conf
+      ignoredPaths:
+      - README.md
+      - .gitignore
+      - docker-compose.yml
